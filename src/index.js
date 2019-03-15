@@ -3,6 +3,41 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import store from './store';
+
+import {
+  addTodo,
+  toggleTodo,
+  setVisibilityFilter,
+  VisibilityFilters,
+} from './store/actions';
+
+// Test store
+
+// initial state
+
+console.log(store.getState());
+
+// subscribe store for watching changes
+
+// subscribe() returns a function for unregistering the listener
+const unsubscribe = store.subscribe(() => console.log(store.getState()))
+
+// dispatch actions
+
+store.dispatch(addTodo('this is first task added'));
+store.dispatch(addTodo('second one'));
+store.dispatch(addTodo('third added'));
+
+store.dispatch(toggleTodo(1));
+store.dispatch(toggleTodo(0));
+store.dispatch(toggleTodo(1));
+
+store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
+
+// unsubscribe
+unsubscribe();
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
