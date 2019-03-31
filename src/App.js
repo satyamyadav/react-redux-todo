@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
 import './components/TodoList';
 import VisibleTodoList from './containers/VisibleTodoList';
 import Footer from './components/Footer';
