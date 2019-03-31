@@ -17,21 +17,22 @@
   }
   &-check {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    border: $border-width solid $border-color;
+    width: $size;
+    height: $size;
+    border: $border-width solid var(--dark-2);
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
     margin-right: $size/3;
     position: relative;
     cursor: pointer;
+    text-align: center;
     &--done {
       &::before {
-        bottom: -15%;
         left: 20%;
         content: '\2713';
         color: var(--dark-2);
+        line-height: $size;
         position: absolute;
       }
     }
@@ -44,6 +45,7 @@
 
 .Footer {
   @include item();
+  text-align: center;
 }
 
 .Card {
@@ -51,4 +53,20 @@
   background: var(--light);
   border: $border-width solid $border-color;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1)
+}
+
+.Button {
+  outline: none;
+  color: inherit;
+  margin: $size/3;
+  padding: $size/6 $size/2;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: $size/8;
+  background: transparent;
+  cursor: pointer;
+  &--active, &:hover {
+    border-color: $border-color;
+    transition: ease all 0.5s;
+  }
 }
