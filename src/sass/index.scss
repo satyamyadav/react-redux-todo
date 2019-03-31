@@ -1,4 +1,6 @@
 @import "./variables.scss";
+@import "./grid.scss";
+@import "./components.scss";
 html,
 body {
   position: relative;
@@ -11,7 +13,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: var(--text-color);
-  background-color: var(--dark-1);
+  background-color: var(--dark-4);
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;

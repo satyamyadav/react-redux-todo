@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  &--p4 {
+    padding: $padding-4;
+  }
+  &--p5 {
+    padding: $padding-5;
+  }
+  &--page {
+    min-height: 100vh;
+  }
+  &--center {
+    justify-content: center;
+  }
+}

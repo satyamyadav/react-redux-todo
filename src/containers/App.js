@@ -8,10 +8,12 @@ import AddTodo from './AddTodo';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <VisibleTodoList />
-        <AddTodo />
-        <Footer />
+      <div className="container container--center container--p5">
+        <div className="Card">
+          <AddTodo />
+          <VisibleTodoList />
+          <Footer />
+        </div>
       </div>
     );
   }

@@ -13,7 +13,7 @@ let AddTodo = ({dispatch}) => {
   let input;
 
   return (
-    <div>
+    <div className="AddTodo">
       <form
         onSubmit={
           e => {
@@ -27,6 +27,7 @@ let AddTodo = ({dispatch}) => {
         } 
       >
         <input
+          placeholder="What needs to be done?   "
           ref={node => input = node}
         />
         <button type="suubmit">
