@@ -3,11 +3,15 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import FilterLinks from '../containers/FilterLinks';
+import { VisibilityFilters } from '../store/actions';
 
 const Footer = () => (
   <div>
-    Footer
+    <span>Show: </span>
+    <FilterLinks filter={VisibilityFilters.SHOW_ALL}>All </FilterLinks>
+    <FilterLinks filter={VisibilityFilters.SHOW_ACTIVE}>Active </FilterLinks>
+    <FilterLinks filter={VisibilityFilters.SHOW_COMPLETED}>Completed </FilterLinks>
   </div>
 
 )
