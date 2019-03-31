@@ -10,10 +10,14 @@ import PropTypes from 'prop-types';
 
 const Todo = ({ text, completed, onClick }) => (
   <li
-    className="Todo-item"
-    onClick={onClick}
-    style={{ textDecoration: completed ? 'line-through' : 'none' }}
+    className={completed ? 'Todo-item Todo-item--done' : 'Todo-item' }
   >
+    <span
+      className={completed ? 'Todo-check Todo-check--done' : 'Todo-check'}
+      type="checkbox"
+      onClick={onClick}
+    >
+    </span>
     {text}
   </li>
 )
