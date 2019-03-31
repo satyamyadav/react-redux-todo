@@ -3,6 +3,7 @@ import './App.css';
 import './components/TodoList';
 import VisibleTodoList from './containers/VisibleTodoList';
 import Footer from './components/Footer';
+import AddTodo from './containers/AddTodo';
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <VisibleTodoList />
+        <AddTodo />
         <Footer />
       </div>
     );

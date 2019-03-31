@@ -6,38 +6,38 @@ import * as serviceWorker from './serviceWorker';
 import store from './store';
 import { Provider } from 'react-redux';
 
-import {
-  addTodo,
-  toggleTodo,
-  setVisibilityFilter,
-  VisibilityFilters,
-} from './store/actions';
+// import {
+//   addTodo,
+//   toggleTodo,
+//   setVisibilityFilter,
+//   VisibilityFilters,
+// } from './store/actions';
 
-// Test store
+// // Test store
 
-// initial state
+// // initial state
 
-console.log(store.getState());
+// console.log(store.getState());
 
-// subscribe store for watching changes
+// // subscribe store for watching changes
 
-// subscribe() returns a function for unregistering the listener
-const unsubscribe = store.subscribe(() => console.log(store.getState()))
+// // subscribe() returns a function for unregistering the listener
+// const unsubscribe = store.subscribe(() => console.log(store.getState()))
 
-// dispatch actions
+// // dispatch actions
 
-store.dispatch(addTodo('this is first task added'));
-store.dispatch(addTodo('second one'));
-store.dispatch(addTodo('third added'));
+// store.dispatch(addTodo('this is first task added'));
+// store.dispatch(addTodo('second one'));
+// store.dispatch(addTodo('third added'));
 
-store.dispatch(toggleTodo(1));
-store.dispatch(toggleTodo(0));
-store.dispatch(toggleTodo(1));
+// store.dispatch(toggleTodo(1));
+// store.dispatch(toggleTodo(0));
+// store.dispatch(toggleTodo(1));
 
-store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
+// store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
 
-// unsubscribe
-unsubscribe();
+// // unsubscribe
+// unsubscribe();
 
 
 ReactDOM.render(
