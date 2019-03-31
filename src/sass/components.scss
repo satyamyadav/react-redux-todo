@@ -41,6 +41,17 @@
 
 .AddTodo {
   @include item();
+  &-form {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-input {
+    outline: none;
+    flex-grow: 1;
+    border: none;
+    padding-left: $size;
+    font-size: large;
+  }
 }
 
 .Footer {
@@ -65,7 +76,8 @@
   border-radius: $size/8;
   background: transparent;
   cursor: pointer;
-  &--active, &:hover {
+  &--active,
+  &:hover {
     border-color: $border-color;
     transition: ease all 0.5s;
   }

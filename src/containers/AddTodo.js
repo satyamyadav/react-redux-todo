@@ -15,6 +15,7 @@ let AddTodo = ({dispatch}) => {
   return (
     <div className="AddTodo">
       <form
+        className="AddTodo-form"
         onSubmit={
           e => {
             e.preventDefault();
@@ -27,10 +28,11 @@ let AddTodo = ({dispatch}) => {
         } 
       >
         <input
+          className="AddTodo-input"
           placeholder="What needs to be done?   "
           ref={node => input = node}
         />
-        <button type="suubmit">
+        <button type="submit" className="Button Button--active">
           Add Todo
         </button>
       </form>
